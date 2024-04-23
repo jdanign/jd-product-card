@@ -30,11 +30,10 @@ const {Provider} = ProductContext;
  * Recibe la prop style para añadirla a los estilos que ya tenga el propio componente.
  */
 export const ProductCard = ({children, product, className='', style, onChange, value=0, initialValues}:ProductCardProps)=>{
-    const {counter, maxCount, isMaxCountReached, increaseBy, reset} = useProduct({
-        product, 
-        value,
-        initialValues,
-        onChange,
+    const {
+        counter, maxCount, isMaxCountReached, increaseBy, reset
+    } = useProduct({
+        product, value, initialValues, onChange,
     });
 
 
